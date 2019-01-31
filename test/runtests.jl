@@ -14,7 +14,7 @@ end
     test_types = (# Base
                   Float64, Int, Rational{Int}, Complex{Float64}, Rational{Int16}, Int8,
                   Float32,
-                  # packages
+                  # packages -- ADD TESTS HERE
                   ForwardDiff.Dual{:foo,Float64,3})
 
     @test result_field(Real) ≡ Number

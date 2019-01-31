@@ -26,3 +26,11 @@ Float64
 julia> result_field(Real)
 Number # non-concrete fallback
 ```
+
+## How can you help
+
+Add tests for other types, especially if defined in another package.
+
+If the tests pass, please make a PR.
+
+If they don't, please open an issue, or (ideally) make a PR that includes fixes.
