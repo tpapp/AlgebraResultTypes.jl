@@ -23,6 +23,10 @@ The package is really lightweight and has no dependencies.
 julia> import ResultTypes # no exported symbols
 julia> result_field(Float64, Int)
 Float64
+julia> result_field(Int, Int)
+Float64
+julia> result_ring(Int, Int)
+Int
 julia> result_field(Real)
 Number # non-concrete fallback
 ```
