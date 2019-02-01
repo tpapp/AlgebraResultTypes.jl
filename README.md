@@ -30,6 +30,12 @@ Int
 julia> result_field(Real)
 Number # non-concrete fallback
 ```
+## Groups
+
+```Julia
+julia> result_group(+,Int,Rational{Int})
+Float64
+```
 
 ## How can you help
 
