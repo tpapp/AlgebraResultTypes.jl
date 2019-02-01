@@ -3,7 +3,7 @@ module ResultTypes
 function result_field(::Type{T}) where {T <: Number}
     isconcretetype(T) || return Number
     o = one(T)
-    typeof(o / o - o)
+    typeof(o / o - o + (o + o))
 end
 
 function result_field(::Type{T}, ::Type{S}) where {T <: Number, S <: Number}
@@ -23,6 +23,8 @@ end
 
 Return a supertype of the result type of applying operation `+`, `-`, `*`, `/` on the given
 types. Ideally, for concrete types, this is the narrowest concrete type.
+
+You may want to apply `widen` to the result for complex calculations.
 
 Formally, for any values `x1::T1`, `x2::T2`, ..., where  `T1, T2, ... <: Number`, and
 operations `op1, op2, ... ∈ (+, -, *, /)`,
@@ -44,7 +46,7 @@ end
 function result_ring(::Type{T}) where {T <: Number}
     isconcretetype(T) || return Number
     o = one(T)
-    typeof(o * o - o)
+    typeof(o * o - o + (o + o))
 end
 
 function result_ring(::Type{T}, ::Type{S}) where {T <: Number, S <: Number}
@@ -64,6 +66,8 @@ end
 
 Return a supertype of the result type of applying operation `+`, `-`, `*`, on the given
 types. Ideally, for concrete types, this is the narrowest concrete type.
+
+You may want to apply `widen` to the result for complex calculations.
 
 See [`result_field`](@ref) for details, *mutatis mutandis*.
 """
