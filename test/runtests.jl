@@ -1,4 +1,4 @@
-using ResultTypes: result_field, result_ring
+using AlgebraResultTypes: result_field, result_ring
 using Test, Random
 import ForwardDiff
 

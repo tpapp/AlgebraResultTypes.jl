@@ -1,4 +1,4 @@
-module ResultTypes
+module AlgebraResultTypes
 
 function result_field(::Type{T}) where {T <: Number}
     isconcretetype(T) || return Number

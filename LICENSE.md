@@ -1,4 +1,4 @@
-The ResultTypes.jl package is licensed under the MIT "Expat" License:
+The AlgebraResultTypes.jl package is licensed under the MIT "Expat" License:
 
 > Copyright (c) 2018: Tamas K. Papp.
 >
