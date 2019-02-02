@@ -1,4 +1,4 @@
-using AlgebraResultTypes: result_field, result_ring
+using AlgebraResultTypes: result_field, result_ring, number_type
 using Test, Random
 import ForwardDiff
 
@@ -94,4 +94,15 @@ end
         @test y isa T
         y isa T || @info "test failure field" Ts y T
     end
+end
+
+####
+#### utilities
+####
+
+@testset "number type" begin
+    @test number_type(1) ≡ Int
+    @test number_type([2.0, 4.0]) ≡ Float64
+    @test number_type(Real[3.0]) ≡ Real
+    @test_throws MethodError number_type(Any[1.0])
 end

@@ -75,4 +75,36 @@ function result_ring(::Type{T}, ::Type{S}, Ts...) where {T <: Number, S <: Numbe
     result_ring(result_ring(T, S), Ts...)
 end
 
+"""
+    number_type(x)
+
+When the argument is a `Number`, return its type, when a container, return its element type
+in case it can be determined to be `<: Number`.
+
+# Recommended usage
+
+Simplify
+
+```julia
+function foo(x::T1, A::AbstractArray{T2}, b::AbstractVector{T3}) where {T1,T2,T3}
+    T = result_field(T1, T2, T3)
+    ...
+end
+```
+
+to
+
+```julia
+function foo(x, A, b)
+    T = result_field(number_type.(x, A, b)...)
+    ...
+end
+```
+
+in situations where the types are not needed otherwise.
+"""
+number_type(::T) where {T <: Number} = T
+
+number_type(::AbstractArray{T}) where {T <: Number} = T
+
 end # module
