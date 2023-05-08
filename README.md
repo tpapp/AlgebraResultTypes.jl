@@ -1,12 +1,7 @@
-# AlgebraResultTypes
+# AlgebraResultTypes.jl
 
-![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)<!--
-![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-retired-orange.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-archived-red.svg)
-![Lifecycle](https://img.shields.io/badge/lifecycle-dormant-blue.svg) -->
-[![Build Status](https://travis-ci.com/tpapp/AlgebraResultTypes.jl.svg?branch=master)](https://travis-ci.com/tpapp/AlgebraResultTypes.jl)
+![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+[![build](https://github.com/tpapp/AlgebraResultTypes.jl/workflows/CI/badge.svg)](https://github.com/tpapp/AlgebraResultTypes.jl/actions?query=workflow%3ACI)
 [![codecov.io](http://codecov.io/github/tpapp/AlgebraResultTypes.jl/coverage.svg?branch=master)](http://codecov.io/github/tpapp/AlgebraResultTypes.jl?branch=master)
 
 A Julia package for calculating result types of arithmetic operations.
